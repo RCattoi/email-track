@@ -10,4 +10,7 @@ require('dotenv').config();
 const conn = require('./db/conn');
 conn();
 
+const trackRoute = require('./api/track');
+app.use('/api/track', trackRoute);
+
 app.listen(3000, () => console.log('Its alive'));
